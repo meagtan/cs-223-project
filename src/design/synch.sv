@@ -2,7 +2,7 @@
  * Button press synchronizer
  * out is only high for one clock cycle after in becomes high
  */
-module synch(input logic clk, in,
+module synch(input  logic clk, in,
              output logic out);
 	logic prev = 0;
     
