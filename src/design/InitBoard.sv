@@ -1,10 +1,13 @@
+/*
+ * Auxiliary module to initialize board
+ * Goes through each row and column and returns the corresponding piece.
+ */
 module InitBoard(
     input clk,
-    input en,
-    output logic [2:0] row,
-    output logic [2:0] col,
-    output logic [2:0] piece,
-    output logic finish
+    input en,                       // whether the module is enabled
+    output logic [2:0] row, col,    // the row and column currently iterated through
+    output logic [2:0] piece,       // the piece assigned to (row, col)
+    output logic finish             // whether the iteration is finished
     );
     
     logic [5:0] cnt = 0;
