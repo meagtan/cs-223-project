@@ -14,7 +14,7 @@ module CheckersGame(input clk,
 	Player player;
 	logic synC, synU, synL, synD, synR;
 	logic [2:0] curRow, curCol, row, col;
-	logic [3:0] scores[1:0];
+    logic [3:0] scores [1:0];
 	
 	assign play = 1 << player; // decoder
 	
