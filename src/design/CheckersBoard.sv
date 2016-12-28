@@ -1,6 +1,12 @@
+// represents each point on the checkers board
 typedef enum logic [2:0] {EMPTY, PL1, PL2 = 3'b011, PL1KING = 3'b101, PL2KING = 3'b111} Piece; // 2nd bit king, 1st bit player, 0th bit occupied
+
 typedef enum logic {PLAYER1, PLAYER2} Player;
 
+/*
+ * Data processor for the checkers board
+ * Contains 8 by 8 array of pieces, takes input from buttons, modifies board according to game rules, sends status outputs.
+ */
 module CheckersBoard(
     input logic clk, btnC, btnU, btnL, btnD, btnR, btnD1, // btnD1 unsynchronized, to check for holding
     input logic [2:0] row, col,
