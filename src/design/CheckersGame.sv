@@ -3,8 +3,8 @@
  * Connects modules together, takes inputs from buttons, sends outputs to dot matrix and seven-segment display.
  */
 module CheckersGame(input clk, 
-		    		input logic btnC, btnU, btnL, btnD, btnR,   // button inputs
-                    output [1:0] play,						    // lights denoting which player's turn it is
+                    input logic btnC, btnU, btnL, btnD, btnR,   // button inputs
+                    output [1:0] play,                          // lights denoting which player's turn it is
                     output [7:0] cols,                          // one-hot column enables for dot matrix
                     output oe, ds, srclk, stclk, mr,            // output enable, digital output, clocks and reset for dot matrix 
                     output [6:0] seg,                           // seven-segment cathode outputs
